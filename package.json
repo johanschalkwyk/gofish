@@ -1,0 +1,31 @@
+{
+  "name": "school-project",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "license": "UNLICENSED",
+  "config": {
+    "watch": ".",
+    "app": "flashcard.js",
+    "bundle": "index.js"
+  },
+  "scripts": {
+    "exe": "./node_modules/.bin/electron main.js main.js",
+    "start": "npm run watch",
+    "clean": "cross-conf-env rimraf npm_package_config_bundle",
+    "build": "cross-conf-env browserify school-ui.js -o school.js",
+    "buildgame": "cross-conf-env browserify card-game.js -o game.js"
+  },
+  "devDependencies": {
+    "cross-conf-env": "latest",
+    "rimraf": "latest",
+    "watch": "latest",
+    "watchify": "latest"
+  },
+  "dependencies": {
+    "console": "latest",
+    "readline":"latest",
+    "jquery":"1.12.4",
+    "jquery-ui":"1.10.5"
+  }
+}

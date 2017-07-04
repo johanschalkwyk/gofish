@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Go Fish</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="game.js"></script>
+<style>
+body {
+background-image: url("img/CardTable.jpg");
+}
+#title {
+text-align: center;
+font-family: cursive
+}
+#hand {
+border: 1px dotted black;
+width: 90%;
+height: 250px;
+}
+#menu {
+padding: 10px;
+}
+.button {
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 5px;
+}
+/* Playing card divs */
+.card {
+cursor: pointer;
+float: left;
+width: 72px;
+height: 96px;
+margin: 10px;
+}
+.cardimage {
+width: 72px;
+height: 96px;
+}
+/* Div for dropping cards into a group */
+.groupbox {
+border: 1px solid black;
+width: 100px;
+height: 120px;
+margin: 20px;
+text-align: center;
+float: left
+}
+</style>
+</head>
+<body>
+
+<h1 id="title">Go Fish</h1>
+
+<div>
+<div id="menu">
+<button id="newgame" class="button">New Game</button>
+<button id="gofish"  class="button">Go Fish</button>
+</div>
+
+<div id="hand">
+</div>
+
+<div id="cardgroups">
+  <div id="cardgroup-0", name="0" class="groupbox ui-widget"><p>+</p></div>
+  <div id="cardgroup-1", name="1" class="groupbox ui-widget"><p>+</p></div>
+  <div id="cardgroup-2", name="2" class="groupbox ui-widget"><p>+</p></div>
+</div>
+
+</body>
+</html>
